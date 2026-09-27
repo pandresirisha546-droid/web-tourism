@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Web Tourism</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <h2>🌍 Web Tourism</h2>
+
+        <a href="#home">Home</a>
+        <a href="#places">Places</a>
+        <a href="#hotels">Hotels</a>
+        <a href="#food">Food</a>
+        <a href="#booking">Booking</a>
+
+    </nav>
+
+
+    <!-- Home -->
+
+    <section id="home">
+
+        <h1>Explore The World 🌎</h1>
+
+        <p>
+            Discover beautiful places, hotels and delicious food.
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search tourist place">
+
+            <button onclick="searchPlace()">
+                Search
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Places -->
+
+    <section id="places">
+
+        <h2>Popular Tourist Places</h2>
+
+        <div class="places-container" id="placesContainer">
+
+
+            <!-- Taj Mahal -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1564507592333-c60657eea523"
+                    alt="Taj Mahal">
+
+                <h3>Taj Mahal</h3>
+
+                <p>📍 Agra, India</p>
+
+                <p>
+                    Visit the famous Taj Mahal
+                    and explore its beautiful history.
+                </p>
+
+                <p class="price">
+                    Ticket: ₹500
+                </p>
+
+                <button onclick="showDetails('Taj Mahal')">
+                    View Details
+                </button>
+
+                <button onclick="selectPlace('Taj Mahal')">
+                    Book Trip
+                </button>
+
+            </div>
+
+
+            <!-- Goa -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2"
+                    alt="Goa Beach">
+
+                <h3>Goa</h3>
+
+                <p>📍 Goa, India</p>
+
+                <p>
+                    Enjoy beautiful beaches,
+                    nature and exciting activities.
+                </p>
+
+                <p class="price">
+                    Ticket: ₹800
+                </p>
+
+                <button onclick="showDetails('Goa')">
+                    View Details
+                </button>
+
+                <button onclick="selectPlace('Goa')">
+                    Book Trip
+                </button>
+
+            </div>
+
+
+            <!-- Kerala -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944"
+                    alt="Kerala">
+
+                <h3>Kerala</h3>
+
+                <p>📍 Kerala, India</p>
+
+                <p>
+                    Explore beautiful backwaters,
+                    greenery and nature.
+                </p>
+
+                <p class="price">
+                    Ticket: ₹700
+                </p>
+
+                <button onclick="showDetails('Kerala')">
+                    View Details
+                </button>
+
+                <button onclick="selectPlace('Kerala')">
+                    Book Trip
+                </button>
+
+            </div>
+
+
+            <!-- Jaipur -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1599661046289-e31897846e41"
+                    alt="Jaipur">
+
+                <h3>Jaipur</h3>
+
+                <p>📍 Rajasthan, India</p>
+
+                <p>
+                    Explore magnificent forts,
+                    palaces and royal culture.
+                </p>
+
+                <p class="price">
+                    Ticket: ₹600
+                </p>
+
+                <button onclick="showDetails('Jaipur')">
+                    View Details
+                </button>
+
+                <button onclick="selectPlace('Jaipur')">
+                    Book Trip
+                </button>
+
+            </div>
+
+
+            <!-- Ooty -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1593693411515-c20261bcad6e"
+                    alt="Ooty">
+
+                <h3>Ooty</h3>
+
+                <p>📍 Tamil Nadu, India</p>
+
+                <p>
+                    Enjoy cool weather, hills,
+                    gardens and beautiful views.
+                </p>
+
+                <p class="price">
+                    Ticket: ₹400
+                </p>
+
+                <button onclick="showDetails('Ooty')">
+                    View Details
+                </button>
+
+                <button onclick="selectPlace('Ooty')">
+                    Book Trip
+                </button>
+
+            </div>
+
+
+            <!-- Manali -->
+
+            <div class="place-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23"
+                    alt="Manali">
+
+                <h3>Manali</h3>
+
+                <p>📍 Himachal Pradesh, India</p>
+
+                <p>
+                    Enjoy mountains, snow,
+                    rivers and adventure.
+                </p>
+
+                <p class="price">
+                    Ticket: ₹900
+                </p>
+
+                <button onclick="showDetails('Manali')">
+                    View Details
+                </button>
+
+                <button onclick="selectPlace('Manali')">
+                    Book Trip
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Hotels -->
+
+    <section id="hotels">
+
+        <h2>🏨 Hotels & Accommodation</h2>
+
+        <div class="info-container">
+
+
+            <div class="info-box">
+
+                <h3>🏨 Hotel Taj View</h3>
+
+                <p>📍 Agra</p>
+
+                <p>⭐ 4.5 / 5</p>
+
+                <p>Comfortable rooms near Taj Mahal.</p>
+
+                <h3>₹2500 / night</h3>
+
+                <button onclick="bookHotel('Hotel Taj View')">
+                    Book Hotel
+                </button>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>🏖️ Goa Beach Resort</h3>
+
+                <p>📍 Goa</p>
+
+                <p>⭐ 4.6 / 5</p>
+
+                <p>Beautiful resort near the beach.</p>
+
+                <h3>₹3500 / night</h3>
+
+                <button onclick="bookHotel('Goa Beach Resort')">
+                    Book Hotel
+                </button>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>🌴 Kerala Nature Resort</h3>
+
+                <p>📍 Kerala</p>
+
+                <p>⭐ 4.7 / 5</p>
+
+                <p>Relaxing stay surrounded by nature.</p>
+
+                <h3>₹3000 / night</h3>
+
+                <button onclick="bookHotel('Kerala Nature Resort')">
+                    Book Hotel
+                </button>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>🏰 Royal Jaipur Hotel</h3>
+
+                <p>📍 Jaipur</p>
+
+                <p>⭐ 4.4 / 5</p>
+
+                <p>Experience traditional Rajasthani style.</p>
+
+                <h3>₹2800 / night</h3>
+
+                <button onclick="bookHotel('Royal Jaipur Hotel')">
+                    Book Hotel
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Food -->
+
+    <section id="food">
+
+        <h2>🍛 Local Food</h2>
+
+        <div class="info-container">
+
+
+            <div class="info-box">
+
+                <h3>🍛 North Indian Food</h3>
+
+                <p>
+                    Biryani, Butter Chicken,
+                    Naan and Paneer dishes.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>🥥 Kerala Food</h3>
+
+                <p>
+                    Appam, Kerala Sadya,
+                    Fish Curry and Payasam.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>🌶️ Andhra Food</h3>
+
+                <p>
+                    Pulihora, Gongura,
+                    Andhra Meals and Biryani.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>🍕 Popular Food</h3>
+
+                <p>
+                    Pizza, Burgers,
+                    Sandwiches and Desserts.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Booking -->
+
+    <section id="booking">
+
+        <h2>🎫 Book Your Trip</h2>
+
+        <form onsubmit="bookTicket(event)">
+
+            <label>Name</label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required>
+
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required>
+
+
+            <label>Destination</label>
+
+            <select id="destination" required>
+
+                <option value="">
+                    Select destination
+                </option>
+
+                <option value="Taj Mahal">
+                    Taj Mahal
+                </option>
+
+                <option value="Goa">
+                    Goa
+                </option>
+
+                <option value="Kerala">
+                    Kerala
+                </option>
+
+                <option value="Jaipur">
+                    Jaipur
+                </option>
+
+                <option value="Ooty">
+                    Ooty
+                </option>
+
+                <option value="Manali">
+                    Manali
+                </option>
+
+            </select>
+
+
+            <label>Travel Date</label>
+
+            <input
+                type="date"
+                id="date"
+                required>
+
+
+            <label>Number of Tickets</label>
+
+            <input
+                type="number"
+                id="tickets"
+                min="1"
+                value="1"
+                required>
+
+
+            <button type="submit">
+                Book Ticket
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>🌍 Web Tourism</h3>
+
+        <p>
+            Explore. Travel. Enjoy.
+        </p>
+
+        <p>
+            © 2026 Web Tourism
+        </p>
+
+    </footer>
+
+
+    <!-- Details Popup -->
+
+    
+    
+
+
+<div id="details"></div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
